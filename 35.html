@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<center>
+<h1> Palindrome Reconizer </h1>
+<form onsubmit="myfunction()">
+Enter a word or phrase: <br> <br>
+<input type="text" id="a">
+<br> <br>
+<input type="submit" value="Check Palindrome">
+</form>
+<div id="output"> </div>
+<script>
+function myfunction(){
+    var inputtext=document.getElementById("a").value
+    var reversedText=inputtext.split('').reverse().join('')
+    if(inputtext.toLowerCase()===reversedText.toLowerCase()){
+         document.getElementById("output").innerHTML="yes its a Palindrome"
+    }
+    else{
+          document.getElementById("output").innerHTML="no,its not a Palindrome"
+
+    }
+}
+</script>
+</center>
+</body>
+</html>
